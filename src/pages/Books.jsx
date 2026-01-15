@@ -12,7 +12,7 @@ const Books = () => {
                         <div className="books__header"></div>
                             <h2 className="section__title books__header--title">All Books</h2>
                             <select id="filter" defaultValue="DEFAULT">
-                                <option value="DEFAULT" selected disabled>Sort</option>
+                                <option value="DEFAULT" disabled>Sort</option>
                                 <option value="LOW_TO_HIGH">Price, Low to High</option>
                                 <option value="HIGH_TO LOW">Price, High to Low</option>
                                 <option value="RATING">Rating</option>
