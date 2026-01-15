@@ -1,26 +1,28 @@
 
-import Featured from './components/Featured';
-import Highlights from './components/Highlights';
-import Landing from './components/Landing';
+import Footer from './components/Footer';
 import Nav from './components/Nav';
-import Book from './components/ui/Book';
-import Discounted from './components/ui/Discounted';
-import Explore from './components/ui/Expolore';
-import Footer from './components/ui/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from "./pages/Home";
+import Books from "./pages/Books";
+import { books } from './data';
 
 
 
 function App() {
+ 
   return (
-    <div className="App">
-      <Nav />        
-      <Landing />
-      <Highlights />
-      <Featured />
-      <Discounted />
-      <Explore />
-      <Footer />
+     <Router>
+      <div className="App">
+        <Nav /> 
+        <Routes>      
+          <Route path="/" element={<Home />} />
+          <Route path="/books" element={<Books books={books} />} />
+          {/* <Route path="/books/:id" element={<BooksInfo books={books} addToCart={addToCart} cart={cart} />} /> */}
+          {/* <Route path="/cart" element={<Cart books={books} cart={cart} changeQuantity={changeQuantity} />} /> */}
+        </Routes>   
+        <Footer />
     </div>
+    </Router>
   );
 }
 
