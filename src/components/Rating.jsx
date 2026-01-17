@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
-const Rating ({ rating }) = => {
+const Rating = ({ rating }) => {
   return (
     <div className="book__ratings">
         {
@@ -10,7 +10,7 @@ const Rating ({ rating }) = => {
         {
         !Number.isInteger(rating) && <FontAwesomeIcon icon="star-half-alt" />
         } 
-        </div>
+    </div>
 )
 }
 
