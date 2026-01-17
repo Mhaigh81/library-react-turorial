@@ -13,7 +13,7 @@ const Cart = () => {
                         <div className="cart">
                             <div className="cart__header">
                                 <span className="cart__book">Book</span>
-                                <span className="cart_quantity">Quantity</span>
+                                <span className="cart__quantity">Quantity</span>
                                 <span className="cart__total">Price</span>
                             </div>
                         
@@ -36,15 +36,15 @@ const Cart = () => {
                                 </div>
                             </div>
                             <div className="total">
-                                <div className="total__item-total total__sub-total">
+                                <div className="total__item total__sub-total">
                                     <span>Subtotal</span>
                                     <span>$9.00</span>
                                 </div>
-                                <div className="total__item-total total__tax">
+                                <div className="total__item total__tax">
                                     <span>Tax</span>
                                     <span>$1.00</span>
                                 </div>
-                                <div className="total__item-total total__price">
+                                <div className="total__item total__price">
                                     <span>Total</span>
                                     <span>$10.00</span>
                                 </div>
