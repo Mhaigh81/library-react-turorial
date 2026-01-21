@@ -11,19 +11,27 @@ const Book = ({ book }) => {
   
   
   useEffect(() => {
+    let isMounted = true
     const image = new Image()
     image.src = book.url
     image.onload = () => {
       setTimeout(() =>{
         if (mountedRef.current) {
         setImg(image)
-        }
+      setTimeout(() {
+          if (isMounted){
+            setImg(image)
+          }
+        
       }, 300)
     }
     return () => {
       mountedRef.current = false
+      isMounted = false
     }
     })
+  }, [book.url])
+
   return (
     <div className="book">
       {img ? (
