@@ -14,7 +14,6 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
     }
         
   return (
-    <div>
         <div id="books__body">
             <main id="books__main">
                 <div className="books__container">
@@ -45,7 +44,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                                                     type="number" 
                                                     min={0} 
                                                     max={99} 
-                                                    className="cart_input"
+                                                    className="cart__input"
                                                     value={book.quantity}
                                                     onChange={(event) => changeQuantity(book, event.target.value)}
                                                  />
@@ -90,7 +89,6 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                 </div>
             </main>
         </div>
-    </div>
   )
 }
 
